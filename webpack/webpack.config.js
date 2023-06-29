@@ -27,6 +27,10 @@ module.exports = ({ analyze, env, dest = "dist" } = {}) => ({
                 warnings: false,
             },
         },
+        headers: {
+            "Cross-Origin-Embedder-Policy": "require-corp",
+            "Cross-Origin-Opener-Policy": "same-origin",
+        },
     },
     entry: {
         app: "./src/index.tsx",

@@ -7,6 +7,7 @@ import { TOOLTIP_COLOR } from "../../constants/index";
 import Icons from "../Icons";
 import { DisplayTimes } from "../../containers/ViewerPanel/types";
 import { TimeUnits } from "../../state/trajectory/types";
+import MediaRecorderComponent from "../mediaRecorderComponent";
 
 import styles from "./style.css";
 interface PlayBackProps {
@@ -237,6 +238,7 @@ const PlayBackControls = ({
                     disabled={isEmpty}
                 />
             </Tooltip>
+            <MediaRecorderComponent />
         </div>
     );
 };
