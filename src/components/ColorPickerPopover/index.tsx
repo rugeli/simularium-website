@@ -10,6 +10,7 @@ interface ColorPickerPopoverProps {
     closeModal: () => void;
     agentName: string;
     tags: string[];
+    colorInfoForPicker: any; // TODO: type this
 }
 
 const ColorPickerPopover = ({
@@ -18,6 +19,7 @@ const ColorPickerPopover = ({
     closeModal,
     agentName,
     tags,
+    colorInfoForPicker,
 }: ColorPickerPopoverProps) => {
     return (
         <Popover
@@ -28,6 +30,7 @@ const ColorPickerPopover = ({
                     agentName={agentName}
                     tags={tags}
                     oldColor={oldColor}
+                    colorInfoForPicker={colorInfoForPicker}
                 />
             }
             placement="right"

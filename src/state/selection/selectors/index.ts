@@ -1,10 +1,10 @@
 import { createSelector } from "reselect";
 import { reduce } from "lodash";
-import { UIDisplayData } from "@aics/simularium-viewer/type-declarations";
 import {
-    ColorChanges,
-    SelectionEntry,
-} from "@aics/simularium-viewer/type-declarations/simularium/SelectionInterface";
+    UIDisplayData,
+    // ColorChanges,
+    // SelectionEntry,
+} from "@aics/simularium-viewer/type-declarations";
 
 import { getAgentDisplayNamesAndStates } from "../../trajectory/selectors";
 import { ColorChangesMap, VisibilitySelectionMap } from "../types";
@@ -17,11 +17,8 @@ import {
 
 export const getHighlightedAgents = createSelector(
     [getAgentHighlightMap, getAgentDisplayNamesAndStates],
-    (
-        highlightedAgents: VisibilitySelectionMap,
-        allAgents: UIDisplayData
-    ): SelectionEntry[] => {
-        const init: SelectionEntry[] = [];
+    (highlightedAgents: VisibilitySelectionMap, allAgents: UIDisplayData) => {
+        const init: any = [];
         return reduce(
             allAgents,
             (acc, agent) => {
@@ -66,8 +63,8 @@ export const getAgentsToHide = createSelector(
     (
         agentVisibilityMap: VisibilitySelectionMap,
         agentDisplayData: UIDisplayData
-    ): SelectionEntry[] => {
-        const init: SelectionEntry[] = [];
+    ) => {
+        const init: any = [];
         return reduce(
             agentDisplayData,
             (acc, agent) => {
@@ -112,15 +109,12 @@ export const getAgentsToHide = createSelector(
 
 export const getColorChanges = createSelector(
     [getColorChangesMap, getAgentDisplayNamesAndStates],
-    (
-        colorChangesMap: ColorChangesMap,
-        agentDisplayData: UIDisplayData
-    ): ColorChanges[] => {
-        const colorArray: ColorChanges[] = [];
+    (colorChangesMap: ColorChangesMap, agentDisplayData: UIDisplayData) => {
+        const colorArray: any = [];
 
-        const agentColorChanges: SelectionEntry[] = reduce(
+        const agentColorChanges = reduce(
             agentDisplayData,
-            (acc: SelectionEntry[], agent) => {
+            (acc: any, agent) => {
                 if (!colorChangesMap.agents[agent.name]) {
                     return acc;
                 }

@@ -41,6 +41,7 @@ interface CheckBoxTreeProps {
     payloadForSelectAll: VisibilitySelectionMap;
     payloadForSelectNone: VisibilitySelectionMap;
     isSharedCheckboxIndeterminate: boolean;
+    colorInfoForPicker: any; //TODO: type this
 }
 const CHECKBOX_SPAN_NO = 2;
 const LABEL_SPAN_NO = 6;
@@ -211,7 +212,12 @@ class CheckBoxTree extends React.Component<CheckBoxTreeProps> {
         </Row>
     );
     render() {
-        const { agentsHighlighted, treeData, agentsChecked } = this.props;
+        const {
+            agentsHighlighted,
+            treeData,
+            agentsChecked,
+            colorInfoForPicker,
+        } = this.props;
         return treeData.length > 0 ? (
             <div className={styles.container}>
                 <Row className={styles.colLabels}>
@@ -252,6 +258,7 @@ class CheckBoxTree extends React.Component<CheckBoxTreeProps> {
                                         color={nodeData.color}
                                         agentName={nodeData.title}
                                         tags={this.getAgentTags(nodeData.title)}
+                                        colorInfoForPicker={colorInfoForPicker}
                                     />
                                     <Text
                                         style={{ maxWidth: 143 }}

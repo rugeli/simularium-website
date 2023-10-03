@@ -32,6 +32,7 @@ import {
     getSelectAllVisibilityMap,
     getSelectNoneVisibilityMap,
     getIsSharedCheckboxIndeterminate,
+    getColorInfoForPicker,
 } from "./selectors";
 import {
     VIEWER_EMPTY,
@@ -60,6 +61,7 @@ interface ModelPanelProps {
     viewerStatus: ViewerStatus;
     isNetworkedFile: boolean;
     changeToNetworkedFile: ActionCreator<RequestNetworkFileAction>;
+    colorInfoForPicker: any; // TODO: type this
 }
 
 class ModelPanel extends React.Component<ModelPanelProps> {
@@ -77,6 +79,7 @@ class ModelPanel extends React.Component<ModelPanelProps> {
             viewerStatus,
             isNetworkedFile,
             changeToNetworkedFile: loadNetworkFile,
+            colorInfoForPicker,
         } = this.props;
         const checkboxTree = (
             <CheckBoxTree
@@ -89,6 +92,7 @@ class ModelPanel extends React.Component<ModelPanelProps> {
                 payloadForSelectAll={payloadForSelectAll}
                 payloadForSelectNone={payloadForSelectNone}
                 isSharedCheckboxIndeterminate={isSharedCheckboxIndeterminate}
+                colorInfoForPicker={colorInfoForPicker}
             />
         );
         const contentMap = {
@@ -128,6 +132,7 @@ function mapStateToProps(state: State) {
         isSharedCheckboxIndeterminate: getIsSharedCheckboxIndeterminate(state),
         viewerStatus: getStatus(state),
         isNetworkedFile: getIsNetworkedFile(state),
+        colorInfoForPicker: getColorInfoForPicker(state),
     };
 }
 

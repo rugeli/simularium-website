@@ -8,6 +8,7 @@ interface ColorSwatchProps {
     color: string;
     agentName: string;
     tags: string[];
+    colorInfoForPicker: any; // TODO: type this
 }
 
 const ColorSwatch = ({
@@ -15,6 +16,7 @@ const ColorSwatch = ({
     color,
     agentName,
     tags,
+    colorInfoForPicker,
 }: ColorSwatchProps): JSX.Element => {
     const [isColorPickerVisible, setColorPickerVisible] = useState(false);
     const [initialColor, setInitialColor] = useState(color);
@@ -44,15 +46,14 @@ const ColorSwatch = ({
                     openModal();
                 }}
             />
-            {isColorPickerVisible ? (
-                <ColorPickerPopover
-                    agentName={agentName}
-                    tags={tags}
-                    oldColor={initialColor}
-                    isOpen={isColorPickerVisible}
-                    closeModal={closeModal}
-                />
-            ) : null}
+            <ColorPickerPopover
+                agentName={agentName}
+                tags={tags}
+                oldColor={initialColor}
+                isOpen={isColorPickerVisible}
+                closeModal={closeModal}
+                colorInfoForPicker={colorInfoForPicker}
+            />
         </>
     );
 };

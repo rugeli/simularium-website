@@ -21,6 +21,7 @@ interface ColorPickerProps {
     setColorChanges: ActionCreator<SetColorChangesAction>;
     setRecentColors: ActionCreator<SetRecentColorsAction>;
     recentColors: string[];
+    infoForPicker: any; // TODO: type this
 }
 
 const ColorPicker = ({
@@ -30,6 +31,7 @@ const ColorPicker = ({
     tags,
     recentColors,
     setRecentColors,
+    infoForPicker,
 }: ColorPickerProps) => {
     const [color, setColor] = useState(oldColor);
 
@@ -133,6 +135,9 @@ const ColorPicker = ({
             </div>
         </div>
     );
+    // TODO: move the render function from popover to here,
+    // encapsulate this stuff into a function called "render picker content" or something and call
+    // that in content of popover
 };
 
 const mapStateToProps = (state: any) => ({
