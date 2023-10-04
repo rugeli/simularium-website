@@ -1,37 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { ActionCreator } from "redux";
-import { connect } from "react-redux";
-import { Tooltip } from "antd";
+import { Popover, Tooltip } from "antd";
 import { HexColorInput, HexColorPicker } from "react-colorful";
 import classNames from "classnames";
 
-import selectionStateBranch from "../../state/selection";
 import { AGENT_COLORS } from "../../containers/ViewerPanel/constants";
-import {
-    ColorChangesMap,
-    SetColorChangesAction,
-    SetRecentColorsAction,
-} from "../../state/selection/types";
+import { ColorChangesMap } from "../../state/selection/types";
 
 import styles from "./style.css";
 interface ColorPickerProps {
     oldColor: string;
     agentName: string;
     tags: string[];
-    setColorChanges: ActionCreator<SetColorChangesAction>;
-    setRecentColors: ActionCreator<SetRecentColorsAction>;
+    isOpen: boolean;
+    closeModal: () => void;
     recentColors: string[];
-    infoForPicker: any; // TODO: type this
+    setColorInfoFromPicker: (
+        colorChanges?: ColorChangesMap,
+        recentColors?: string[]
+    ) => void;
 }
 
 const ColorPicker = ({
     oldColor,
-    setColorChanges,
     agentName,
     tags,
+    isOpen,
+    closeModal,
     recentColors,
-    setRecentColors,
-    infoForPicker,
+    setColorInfoFromPicker,
 }: ColorPickerProps) => {
     const [color, setColor] = useState(oldColor);
 
@@ -40,7 +36,7 @@ const ColorPicker = ({
             agents: { [agentName]: tags },
             color: color,
         };
-        setColorChanges(colorChanges);
+        setColorInfoFromPicker(colorChanges);
         updateRecentColors(color);
     };
 
@@ -56,10 +52,10 @@ const ColorPicker = ({
         if (newRecentColors.length > 18) {
             newRecentColors.pop();
         }
-        setRecentColors(newRecentColors);
+        setColorInfoFromPicker(undefined, newRecentColors);
     };
 
-    return (
+    const colorPickerContent = (
         <div className={styles.container}>
             <HexColorPicker color={color} onChange={setColor} />
             <div className={styles.selectionDisplay}>
@@ -121,7 +117,7 @@ const ColorPicker = ({
             </div>
             <p className={styles.recentColorText}> Recent </p>
             <div className={classNames([styles.colors, styles.recentSwatches])}>
-                {recentColors.map((color) => (
+                {recentColors.map((color: string) => (
                     <button
                         key={color}
                         className={classNames([
@@ -135,18 +131,17 @@ const ColorPicker = ({
             </div>
         </div>
     );
-    // TODO: move the render function from popover to here,
-    // encapsulate this stuff into a function called "render picker content" or something and call
-    // that in content of popover
+
+    return (
+        <Popover
+            overlayClassName={styles.popover}
+            open={isOpen}
+            content={colorPickerContent}
+            placement="right"
+            onOpenChange={closeModal}
+            trigger="click"
+        />
+    );
 };
 
-const mapStateToProps = (state: any) => ({
-    recentColors: selectionStateBranch.selectors.getRecentColors(state),
-});
-
-const dispatchToPropsMap = {
-    setColorChanges: selectionStateBranch.actions.setColorChanges,
-    setRecentColors: selectionStateBranch.actions.setRecentColors,
-};
-
-export default connect(mapStateToProps, dispatchToPropsMap)(ColorPicker);
+export default ColorPicker;
