@@ -3,11 +3,7 @@ import { isEmpty } from "lodash";
 
 import { AgentDisplayNode } from "../../components/CheckBoxTree";
 import { getUiDisplayDataTree } from "../../state/trajectory/selectors";
-import {
-    getAgentVisibilityMap,
-    getColorChanges,
-    getRecentColors,
-} from "../../state/selection/selectors";
+import { getAgentVisibilityMap } from "../../state/selection/selectors";
 import { VisibilitySelectionMap } from "../../state/selection/types";
 
 // Returns an agent visibility map that indicates all states should be visible
@@ -75,9 +71,4 @@ export const getIsSharedCheckboxIndeterminate = createSelector(
         // Return true if some but not all agents are visible
         return numInvisibleAgents > 0 && numInvisibleAgents < allAgents.length;
     }
-);
-
-export const getColorInfoForPicker = createSelector(
-    [getColorChanges, getRecentColors],
-    (colorChanges, recentColors) => ({ colorChanges, recentColors })
 );
