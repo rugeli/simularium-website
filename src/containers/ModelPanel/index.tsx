@@ -16,7 +16,9 @@ import { State } from "../../state/types";
 import {
     getAgentVisibilityMap,
     getAgentHighlightMap,
+    getRecentColors,
 } from "../../state/selection/selectors";
+import selectionStateBranch from "../../state/selection";
 import {
     turnAgentsOnByDisplayKey,
     highlightAgentsByDisplayKey,
@@ -24,6 +26,9 @@ import {
 } from "../../state/selection/actions";
 import {
     ChangeAgentsRenderingStateAction,
+    ColorChangesMap,
+    SetColorChangesAction,
+    SetRecentColorsAction,
     SetVisibleAction,
     VisibilitySelectionMap,
 } from "../../state/selection/types";
@@ -32,7 +37,6 @@ import {
     getSelectAllVisibilityMap,
     getSelectNoneVisibilityMap,
     getIsSharedCheckboxIndeterminate,
-    getColorInfoForPicker,
 } from "./selectors";
 import {
     VIEWER_EMPTY,
@@ -61,7 +65,9 @@ interface ModelPanelProps {
     viewerStatus: ViewerStatus;
     isNetworkedFile: boolean;
     changeToNetworkedFile: ActionCreator<RequestNetworkFileAction>;
-    colorInfoForPicker: any; // TODO: type this
+    recentColors: string[];
+    setColorChanges: ActionCreator<SetColorChangesAction>;
+    setRecentColors: ActionCreator<SetRecentColorsAction>;
 }
 
 class ModelPanel extends React.Component<ModelPanelProps> {
@@ -79,8 +85,23 @@ class ModelPanel extends React.Component<ModelPanelProps> {
             viewerStatus,
             isNetworkedFile,
             changeToNetworkedFile: loadNetworkFile,
-            colorInfoForPicker,
+            recentColors,
+            setColorChanges,
+            setRecentColors,
         } = this.props;
+
+        const setColorInfoFromPicker = (
+            colorChanges?: ColorChangesMap,
+            recentColors?: string[]
+        ) => {
+            if (colorChanges) {
+                setColorChanges(colorChanges);
+            }
+            if (recentColors) {
+                setRecentColors(recentColors);
+            }
+        };
+
         const checkboxTree = (
             <CheckBoxTree
                 treeData={uiDisplayDataTree}
@@ -92,7 +113,8 @@ class ModelPanel extends React.Component<ModelPanelProps> {
                 payloadForSelectAll={payloadForSelectAll}
                 payloadForSelectNone={payloadForSelectNone}
                 isSharedCheckboxIndeterminate={isSharedCheckboxIndeterminate}
-                colorInfoForPicker={colorInfoForPicker}
+                recentColors={recentColors}
+                setColorInfoFromPicker={setColorInfoFromPicker}
             />
         );
         const contentMap = {
@@ -132,7 +154,7 @@ function mapStateToProps(state: State) {
         isSharedCheckboxIndeterminate: getIsSharedCheckboxIndeterminate(state),
         viewerStatus: getStatus(state),
         isNetworkedFile: getIsNetworkedFile(state),
-        colorInfoForPicker: getColorInfoForPicker(state),
+        recentColors: getRecentColors(state),
     };
 }
 
@@ -142,6 +164,8 @@ const dispatchToPropsMap = {
     turnAgentsOnByDisplayKey,
     highlightAgentsByDisplayKey,
     setAgentsVisible,
+    setColorChanges: selectionStateBranch.actions.setColorChanges,
+    setRecentColors: selectionStateBranch.actions.setRecentColors,
 };
 
 export default connect(mapStateToProps, dispatchToPropsMap)(ModelPanel);
