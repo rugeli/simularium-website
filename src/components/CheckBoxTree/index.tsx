@@ -7,6 +7,7 @@ import classNames from "classnames";
 
 import {
     ChangeAgentsRenderingStateAction,
+    ColorChangesMap,
     SetVisibleAction,
     VisibilitySelectionMap,
 } from "../../state/selection/types";
@@ -41,7 +42,11 @@ interface CheckBoxTreeProps {
     payloadForSelectAll: VisibilitySelectionMap;
     payloadForSelectNone: VisibilitySelectionMap;
     isSharedCheckboxIndeterminate: boolean;
-    colorInfoForPicker: any; //TODO: type this
+    recentColors: string[]; //TODO: type this;
+    setColorInfoFromPicker: (
+        colorChanges?: ColorChangesMap,
+        recentColors?: string[]
+    ) => void;
 }
 const CHECKBOX_SPAN_NO = 2;
 const LABEL_SPAN_NO = 6;
@@ -216,7 +221,8 @@ class CheckBoxTree extends React.Component<CheckBoxTreeProps> {
             agentsHighlighted,
             treeData,
             agentsChecked,
-            colorInfoForPicker,
+            recentColors,
+            setColorInfoFromPicker,
         } = this.props;
         return treeData.length > 0 ? (
             <div className={styles.container}>
@@ -258,7 +264,10 @@ class CheckBoxTree extends React.Component<CheckBoxTreeProps> {
                                         color={nodeData.color}
                                         agentName={nodeData.title}
                                         tags={this.getAgentTags(nodeData.title)}
-                                        colorInfoForPicker={colorInfoForPicker}
+                                        recentColors={recentColors}
+                                        setColorInfoFromPicker={
+                                            setColorInfoFromPicker
+                                        }
                                     />
                                     <Text
                                         style={{ maxWidth: 143 }}
@@ -332,6 +341,12 @@ class CheckBoxTree extends React.Component<CheckBoxTreeProps> {
                                                         tags={[
                                                             value.value as string,
                                                         ]}
+                                                        recentColors={
+                                                            recentColors
+                                                        }
+                                                        setColorInfoFromPicker={
+                                                            setColorInfoFromPicker
+                                                        }
                                                     />
                                                     <label
                                                         className={

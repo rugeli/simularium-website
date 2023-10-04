@@ -1,14 +1,20 @@
 import * as React from "react";
+import { useState } from "react";
+
+import ColorPicker from "../ColorPicker";
 
 import styles from "./styles.css";
-import ColorPickerPopover from "../ColorPickerPopover";
-import { useState } from "react";
+import { ColorChangesMap } from "../../state/selection/types";
 interface ColorSwatchProps {
     childrenHaveDifferentColors?: boolean;
     color: string;
     agentName: string;
     tags: string[];
-    colorInfoForPicker: any; // TODO: type this
+    recentColors: string[];
+    setColorInfoFromPicker: (
+        colorChanges?: ColorChangesMap,
+        recentColors?: string[]
+    ) => void;
 }
 
 const ColorSwatch = ({
@@ -16,7 +22,8 @@ const ColorSwatch = ({
     color,
     agentName,
     tags,
-    colorInfoForPicker,
+    recentColors,
+    setColorInfoFromPicker,
 }: ColorSwatchProps): JSX.Element => {
     const [isColorPickerVisible, setColorPickerVisible] = useState(false);
     const [initialColor, setInitialColor] = useState(color);
@@ -46,13 +53,14 @@ const ColorSwatch = ({
                     openModal();
                 }}
             />
-            <ColorPickerPopover
+            <ColorPicker
                 agentName={agentName}
                 tags={tags}
                 oldColor={initialColor}
                 isOpen={isColorPickerVisible}
                 closeModal={closeModal}
-                colorInfoForPicker={colorInfoForPicker}
+                recentColors={recentColors}
+                setColorInfoFromPicker={setColorInfoFromPicker}
             />
         </>
     );
