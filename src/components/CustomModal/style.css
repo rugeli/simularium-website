@@ -16,7 +16,7 @@
 }
 
 .close-icon:hover svg {
-    fill: var(--dark);
+    fill: var(--white-three);
 }
 
 .modal :global(.ant-modal-header) {
@@ -39,7 +39,7 @@
 }
 
 .modal :global(.ant-modal-footer) {
-    background-color: var(--light-theme-modal-content-bgg);
+    background-color: var(--light-theme-modal-content-bg);
     padding: 0px;
 }
 

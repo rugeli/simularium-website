@@ -1,5 +1,6 @@
 /* Modal buttons are light theme, should typically be type="primary" or type="default" */
-.light-theme :global(.ant-btn-default) {
+.light-theme :global(.ant-btn-default),
+.light-theme :global(.ant-btn-default):focus {
     background-color: var(--light-theme-btn-default-bg);
     border-color: var(--light-theme-btn-default-border);
     color: var(--light-theme-btn-default-color);
@@ -17,7 +18,8 @@
     color: var(--light-theme-btn-default-disabled-color);
 }
 
-.light-theme :global(.ant-btn-primary) {
+.light-theme :global(.ant-btn-primary),
+.light-theme :global(.ant-btn-default):focus {
     background-color: var(--light-theme-btn-primary-bg);
     border: var(--light-theme-btn-primary-border);
     color: var(--light-theme-btn-primary-color);
