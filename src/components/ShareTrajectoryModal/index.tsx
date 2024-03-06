@@ -1,7 +1,6 @@
 import React from "react";
-import classNames from "classnames";
 import { connect } from "react-redux";
-import { Button, Checkbox, Divider, Input } from "antd";
+import { Button, Checkbox, Input } from "antd";
 
 import { State } from "../../state/types";
 import { TimeUnits } from "../../state/trajectory/types";
@@ -12,9 +11,9 @@ import CustomModal from "../CustomModal";
 import { Link, Warn } from "../Icons";
 import { URL_PARAM_KEY_TIME } from "../../constants";
 import { editUrlParams } from "../../util";
+import classNames from "classnames";
 
 import styles from "./style.css";
-import theme from "../theme/light-theme.css";
 
 interface ShareTrajectoryModalProps {
     trajectoryIsSharable: boolean;
@@ -104,51 +103,61 @@ const ShareTrajectoryModal = ({
     const modalOptions = {
         errorMessage: {
             content: (
-                <>
+                <div
+                    className={classNames(
+                        styles.bodyContainer,
+                        styles.errorContainer
+                    )}
+                >
                     <h4>{Warn} The current file is stored on your device.</h4>
-                    <div className={styles.bodyText}>
+                    <div>
                         <h5>
                             To generate a shareable link, please save the file
                             in the public cloud using Dropbox, Google Drive, or
                             Amazon S3 and load the model into Simularium via
-                            URL.
+                            URL.{"  "}
                             <a
                                 href="https://simularium.allencell.org/tutorial#share-a-link"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                {" "}
-                                Learn more{" "}
+                                Learn more
                             </a>
                         </h5>
                     </div>
-                </>
+                </div>
             ),
             footer: (
-                <Button
-                    className={styles.okButton}
-                    type="default"
-                    onClick={closeModal}
-                >
-                    Ok
-                </Button>
+                <>
+                    <Button type="default" onClick={closeModal}>
+                        Ok
+                    </Button>
+                </>
             ),
         },
         isSharable: {
             content: (
-                <>
-                    <div>
+                <div
+                    className={classNames(
+                        styles.bodyContainer,
+                        styles.shareContainer
+                    )}
+                >
+                    <div className={styles.urlInputContainer}>
                         <Input
                             className={styles.urlInput}
                             value={url}
                             disabled
                         />
-                        <Button type="text" onClick={copyToClipboard}>
+                        <Button
+                            className={styles.copyButton}
+                            type="primary"
+                            onClick={copyToClipboard}
+                        >
                             Copy {Link}
                         </Button>
                     </div>
                     <div className={styles.timeInputContainer}>
-                        {" "}
                         <Checkbox onChange={handleAllowUserInput}></Checkbox>
                         <p className={styles.timeInputText}>Start at</p>
                         <Input
@@ -158,31 +167,34 @@ const ShareTrajectoryModal = ({
                             onChange={handleUserInput}
                         />
                         <div>
-                            {" "}
-                            /{displayTimes.roundedLastFrameTime}{" "}
-                            {timeUnits ? timeUnits.name : null}{" "}
+                            /{displayTimes.roundedLastFrameTime}
+                            {timeUnits ? timeUnits.name : null}
                         </div>
                     </div>
-                </>
+                </div>
             ),
             footer: (
-                <Button className="secondary-button" onClick={closeModal}>
-                    Close
-                </Button>
+                <>
+                    <Button type="default" onClick={closeModal}>
+                        Close
+                    </Button>
+                </>
             ),
         },
     };
 
     return (
         <CustomModal
-            className={classNames(styles.uploadModal, theme.lightTheme)}
-            title="Share Trajectory"
+            closeHandler={closeModal}
+            className={styles.uploadModal}
+            titleText="Share Trajectory"
+            divider={true}
             width={trajectoryIsSharable ? 550 : 611}
             onCancel={closeModal}
             mask={false}
             centered
             open
-            footer={
+            footerButtons={
                 trajectoryIsSharable
                     ? modalOptions.isSharable.footer
                     : modalOptions.errorMessage.footer
@@ -191,7 +203,6 @@ const ShareTrajectoryModal = ({
             {trajectoryIsSharable
                 ? modalOptions.isSharable.content
                 : modalOptions.errorMessage.content}
-            <Divider />
         </CustomModal>
     );
 };

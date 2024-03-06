@@ -15,19 +15,20 @@ const VersionModal: React.FC<VersionModalProps> = ({ setModalVisible }) => {
     };
 
     const footerButton = (
-        <Button type="primary" onClick={closeModal}>
+        <Button type="default" onClick={closeModal}>
             Close
         </Button>
     );
 
     return (
         <CustomModal
-            className={styles.container}
+            closeHandler={closeModal}
+            titleText="Version Information"
+            className={styles.version}
             onCancel={closeModal}
             open
-            footer={footerButton}
+            footerButtons={footerButton}
             centered
-            title="Version Information"
             width={425}
         >
             <div>
