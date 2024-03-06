@@ -62,7 +62,7 @@
 }
 
 .modal :global(.ant-input) {
-    border: 1px solid var(--heather);
+    border: 1px solid var(--light-theme-input-border-highlight);
     border-radius: 3px;
     text-align: right;
 }
