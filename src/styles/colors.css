@@ -77,7 +77,6 @@
     --dark-theme-tooltip-bg: var(--charcoal-grey);
     --dark-theme-version-badge-purple: var(--dark-five);
     /* Light theme */
-    --light-theme-modal-content-bg: var(--light-purple);
     --light-theme-background-purple: var(--pale-grey);
     --light-theme-button-purple: var(--dark-blue-grey);
     --light-theme-heading1-gray: var(--dark-three);
@@ -88,22 +87,27 @@
     --light-theme-version-badge-purple: var(--allen-purple);
     --light-theme-background-off-white: var(--off-white);
     --light-theme-faint-text: var(--white-two);
+    --light-theme-modal-content-bg: var(--light-purple);
     --light-theme-modal-supplemental-text: var(--charcoal-grey);
+    --light-theme-input-border-highlight: var(--heather);
     /* default modal buttons */
     --light-theme-btn-default-bg: transparent;
-    --light-theme-btn-default-color: var(--dark-four);
     --light-theme-btn-default-border: var(--dark-four);
+    --light-theme-btn-default-color: var(--dark-four);
+    --light-theme-btn-default-hover-bg: var(--dark);
+    --light-theme-btn-default-hover-border: var(--dark);
     --light-theme-btn-default-hover-color: var(--baby-purple);
-    --light-theme-btn-default-hover-border: var(--baby-purple);
     --light-theme-btn-default-disabled-bg: transparent;
-    --light-theme-btn-default-disabled-color: var(--dark-four);
-    --light-theme-btn-default-disabled-border: var(--dark-four);
+    --light-theme-btn-default-disabled-border: var(--heather);
+    --light-theme-btn-default-disabled-color: var(--heather);
     /* primary modal buttons */
     --light-theme-btn-primary-bg: var(--dark-four);
+    --light-theme-btn-primary-border: var(--dark-four);
     --light-theme-btn-primary-color: var(--white-three);
-    --light-theme-btn-primary-border: var(--white-three);
+    --light-theme-btn-primary-hover-bg: var(--dark);
+    --light-theme-btn-primary-hover-border: var(--dark);
     --light-theme-btn-primary-hover-color: var(--baby-purple);
-    --light-theme-btn-primary-disabled-bg: var(--dark-four);
+    --light-theme-btn-primary-disabled-bg: var(--heather);
+    --light-theme-btn-primary-disabled-border: var(--heather);
     --light-theme-btn-primary-disabled-color: var(--white-three);
-    --light-theme-btn-primary-disabled-border: var(--white-three);
 }

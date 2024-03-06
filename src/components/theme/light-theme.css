@@ -6,8 +6,15 @@
 }
 
 .light-theme :global(.ant-btn-default:hover) {
+    background-color: var(--light-theme-btn-default-hover-bg);
     border-color: var(--light-theme-btn-default-hover-border);
     color: var(--light-theme-btn-default-hover-color);
+}
+
+.light-theme :global(.ant-btn-default[disabled]) {
+    background: var(--light-theme-btn-default-disabled-bg);
+    border: var(--light-theme-btn-default-disabled-border);
+    color: var(--light-theme-btn-default-disabled-color);
 }
 
 .light-theme :global(.ant-btn-primary) {
@@ -17,6 +24,8 @@
 }
 
 .light-theme :global(.ant-btn-primary:hover) {
+    background-color: var(--light-theme-btn-primary-hover-bg);
+    border: var(--light-theme-btn-primary-hover-border);
     color: var(--light-theme-btn-primary-hover-color);
 }
 
