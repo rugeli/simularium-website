@@ -87,16 +87,6 @@
      --light-theme-modal-color: var(--dark);
      --light-theme-modal-close-icon: var(--warm-gray);
      --light-theme-modal-close-icon-hover: var(--white-three);
-    /* default modal buttons */
-    --light-theme-btn-secondary-bg: transparent;
-    --light-theme-btn-secondary-border: var(--dark-four);
-    --light-theme-btn-secondary-color: var(--dark-four);
-    --light-theme-btn-secondary-hover-bg: var(--dark);
-    --light-theme-btn-secondary-hover-border: var(--dark);
-    --light-theme-btn-secondary-hover-color: var(--baby-purple);
-    --light-theme-btn-secondary-disabled-bg: transparent;
-    --light-theme-btn-secondary-disabled-border: var(--heather);
-    --light-theme-btn-secondary-disabled-color: var(--heather);
     /* primary modal buttons */
     --light-theme-btn-primary-bg: var(--dark-four);
     --light-theme-btn-primary-border: var(--dark-four);
@@ -107,4 +97,14 @@
     --light-theme-btn-primary-disabled-bg: var(--heather);
     --light-theme-btn-primary-disabled-border: var(--heather);
     --light-theme-btn-primary-disabled-color: var(--white-three);
+    /* secondary modal buttons */
+    --light-theme-btn-secondary-bg: transparent;
+    --light-theme-btn-secondary-border: var(--dark-four);
+    --light-theme-btn-secondary-color: var(--dark-four);
+    --light-theme-btn-secondary-hover-bg: var(--dark);
+    --light-theme-btn-secondary-hover-border: var(--dark);
+    --light-theme-btn-secondary-hover-color: var(--baby-purple);
+    --light-theme-btn-secondary-disabled-bg: transparent;
+    --light-theme-btn-secondary-disabled-border: var(--heather);
+    --light-theme-btn-secondary-disabled-color: var(--heather);
 }
