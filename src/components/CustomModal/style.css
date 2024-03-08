@@ -12,11 +12,11 @@
 }
 
 .close-icon svg {
-    fill: var(--warm-gray);
+    fill: var(--light-theme-modal-close-icon);
 }
 
 .close-icon:hover svg {
-    fill: var(--white-three);
+    fill: var(--light-theme-modal-close-icon-hover);
 }
 
 .modal :global(.ant-modal-header) {
@@ -33,13 +33,13 @@
 }
 
 .modal :global(.ant-modal-body) {
-    color: var(--dark);
+    color: var(--light-theme-modal-color);
     font-size: 16px;
     padding: 24px;
 }
 
 .modal :global(.ant-modal-footer) {
-    background-color: var(--light-theme-modal-content-bg);
+    background-color: var(--light-theme-modal-bg);
     padding: 0px;
 }
 
@@ -68,8 +68,12 @@
 }
 
 .modal :global(.ant-divider) {
-    background-color: var(--heather);
+    background-color: var(--light-theme-divider-color);
     left: 0;
     margin: 0px;
     position: absolute;
+}
+
+.modal button:hover {
+    border-color: red;
 }

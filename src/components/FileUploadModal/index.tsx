@@ -98,13 +98,13 @@ const FileUploadModal: React.FC<FileUploadModalProps> = ({
     const footerButtons = (
         <>
             <Button
-                className="secondary-button"
+                className="primary-button"
                 disabled={disableLoad}
                 onClick={onLoadClick}
             >
                 Load
             </Button>
-            <Button className="primary-button" onClick={closeModal}>
+            <Button className="secondary-button" onClick={closeModal}>
                 Cancel
             </Button>
         </>

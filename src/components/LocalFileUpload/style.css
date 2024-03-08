@@ -4,11 +4,11 @@
 
 .file-upload :global(.ant-upload-list:hover) :global(.ant-upload-list-item-name),
 .file-upload :global(.ant-upload-list) :global(.ant-upload-list-item-name) {
-    background-color: var(--light-theme-modal-content-bg);
+    background-color: var(--light-theme-modal-bg);
 }
 
 .file-upload :global(.ant-upload-list-item-card-actions-btn) {
-    background-color: var(--light-theme-modal-content-bg);
+    background-color: var(--light-theme-modal-bg);
     border: none;
 }
 

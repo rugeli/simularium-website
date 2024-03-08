@@ -70,6 +70,7 @@
     --dark-theme-tooltip-bg: var(--charcoal-gray);
     --dark-theme-version-badge-purple: var(--dark-five);
     /* Light theme */
+    --light-theme-divider-color: var(--heather);
     --light-theme-background-purple: var(--pale-gray);
     --light-theme-heading1-gray: var(--dark-three);
     --light-theme-heading2-gray: var(--grayish-brown);
@@ -78,19 +79,24 @@
     --light-theme-version-badge-purple: var(--allen-purple);
     --light-theme-background-off-white: var(--off-white);
     --light-theme-faint-text: var(--white-two);
-    --light-theme-modal-content-bg: var(--light-purple);
+   
     --light-theme-modal-supplemental-text: var(--charcoal-gray);
     --light-theme-input-border-highlight: var(--heather);
+    /* modal colors */
+     --light-theme-modal-bg: var(--light-purple);
+     --light-theme-modal-color: var(--dark);
+     --light-theme-modal-close-icon: var(--warm-gray);
+     --light-theme-modal-close-icon-hover: var(--white-three);
     /* default modal buttons */
-    --light-theme-btn-default-bg: transparent;
-    --light-theme-btn-default-border: var(--dark-four);
-    --light-theme-btn-default-color: var(--dark-four);
-    --light-theme-btn-default-hover-bg: var(--dark);
-    --light-theme-btn-default-hover-border: var(--dark);
-    --light-theme-btn-default-hover-color: var(--baby-purple);
-    --light-theme-btn-default-disabled-bg: transparent;
-    --light-theme-btn-default-disabled-border: var(--heather);
-    --light-theme-btn-default-disabled-color: var(--heather);
+    --light-theme-btn-secondary-bg: transparent;
+    --light-theme-btn-secondary-border: var(--dark-four);
+    --light-theme-btn-secondary-color: var(--dark-four);
+    --light-theme-btn-secondary-hover-bg: var(--dark);
+    --light-theme-btn-secondary-hover-border: var(--dark);
+    --light-theme-btn-secondary-hover-color: var(--baby-purple);
+    --light-theme-btn-secondary-disabled-bg: transparent;
+    --light-theme-btn-secondary-disabled-border: var(--heather);
+    --light-theme-btn-secondary-disabled-color: var(--heather);
     /* primary modal buttons */
     --light-theme-btn-primary-bg: var(--dark-four);
     --light-theme-btn-primary-border: var(--dark-four);
