@@ -14,8 +14,8 @@ interface CustomModalProps extends ModalProps {
 }
 
 /** Wrapper to keep styling of modals consistent:
- * class name "primary-button" for cancel/close/ok buttons
- * class name "secondary-button" for action buttons
+ * class name "secondary-button" for cancel/close/ok buttons
+ * class name "primary-button" for action buttons
  * provide footerButtons as single <Button> or multiple buttons wrapped in a <>
  */
 const CustomModal: React.FC<CustomModalProps> = ({
