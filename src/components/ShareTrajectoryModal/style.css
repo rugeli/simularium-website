@@ -47,7 +47,7 @@
 
 .time-input[disabled] {
     background: transparent;
-    color: var(--medium-gray);
+    color: var(--light-theme-input-disabled-color);
 }
 
 .time-input-text {
