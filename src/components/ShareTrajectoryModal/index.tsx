@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Button, Checkbox, Input } from "antd";
+import classNames from "classnames";
 
 import { State } from "../../state/types";
 import { TimeUnits } from "../../state/trajectory/types";
@@ -11,7 +12,6 @@ import CustomModal from "../CustomModal";
 import { Link, Warn } from "../Icons";
 import { URL_PARAM_KEY_TIME } from "../../constants";
 import { editUrlParams } from "../../util";
-import classNames from "classnames";
 
 import styles from "./style.css";
 
@@ -103,12 +103,7 @@ const ShareTrajectoryModal = ({
     const modalOptions = {
         errorMessage: {
             content: (
-                <div
-                    className={classNames(
-                        styles.bodyContainer,
-                        styles.errorContainer
-                    )}
-                >
+                <div className={styles.errorContainer}>
                     <h4>{Warn} The current file is stored on your device.</h4>
                     <div>
                         <h5>
@@ -137,12 +132,7 @@ const ShareTrajectoryModal = ({
         },
         isSharable: {
             content: (
-                <div
-                    className={classNames(
-                        styles.bodyContainer,
-                        styles.shareContainer
-                    )}
-                >
+                <div className={styles.shareContainer}>
                     <div className={styles.urlInputContainer}>
                         <Input
                             className={styles.urlInput}
