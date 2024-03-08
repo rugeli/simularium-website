@@ -15,7 +15,7 @@ const VersionModal: React.FC<VersionModalProps> = ({ setModalVisible }) => {
     };
 
     const footerButton = (
-        <Button type="default" onClick={closeModal}>
+        <Button className={"secondary-button"} onClick={closeModal}>
             Close
         </Button>
     );

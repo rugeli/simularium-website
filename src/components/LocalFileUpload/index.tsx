@@ -69,7 +69,9 @@ const LocalFileUpload: React.FC<FileUploadProps> = ({
                     state: { localFile: true },
                 }}
             >
-                {children || <Button type="primary">Select file</Button>}
+                {children || (
+                    <Button className="secondary-button">Select file</Button>
+                )}
             </Link>
         </Upload>
     );

@@ -129,7 +129,7 @@ const ShareTrajectoryModal = ({
             ),
             footer: (
                 <>
-                    <Button type="default" onClick={closeModal}>
+                    <Button className={"secondary-button"} onClick={closeModal}>
                         Ok
                     </Button>
                 </>
@@ -150,8 +150,10 @@ const ShareTrajectoryModal = ({
                             disabled
                         />
                         <Button
-                            className={styles.copyButton}
-                            type="primary"
+                            className={classNames(
+                                "primary-button",
+                                styles.copyButton
+                            )}
                             onClick={copyToClipboard}
                         >
                             Copy {Link}
@@ -175,7 +177,7 @@ const ShareTrajectoryModal = ({
             ),
             footer: (
                 <>
-                    <Button type="default" onClick={closeModal}>
+                    <Button className="secondary-button" onClick={closeModal}>
                         Close
                     </Button>
                 </>
