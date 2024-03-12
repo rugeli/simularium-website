@@ -1,9 +1,7 @@
 import React from "react";
 import { Divider, Modal, ModalProps } from "antd";
 import classNames from "classnames";
-import { Close } from "../Icons";
 
-import theme from "../theme/light-theme.css";
 import theme from "../theme/light-theme.css";
 import styles from "./style.css";
 
@@ -29,9 +27,10 @@ const CustomModal: React.FC<CustomModalProps> = ({
     const title = (
         <>
             <span>{titleText}</span>
-            <span className={styles.closeIcon} onClick={closeHandler}>
-                {Close}
-            </span>
+            <span
+                className={classNames("icon-moon", "anticon", "close-icon")}
+                onClick={closeHandler}
+            ></span>
         </>
     );
 

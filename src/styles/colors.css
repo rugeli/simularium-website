@@ -84,6 +84,8 @@
     --light-theme-modal-content-bg: var(--light-purple);
     --light-theme-modal-supplemental-text: var(--charcoal-gray);
     --light-theme-modal-supplemental-text: var(--charcoal-gray);
+    --light-theme-modal-close-icon: var(--warm-gray);
+    --light-theme-modal-close-icon-hover: var(--white-three);
     /* primary modal buttons */
     --light-theme-btn-primary-bg: var(--dark-four);
     --light-theme-btn-primary-border: var(--dark-four);
