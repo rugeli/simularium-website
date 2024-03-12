@@ -32,4 +32,5 @@
 .upload-modal :global(.ant-tabs .ant-tabs-tab) {
     padding: 0;
     font-weight: 600;
+    font-size: 16px;
 }
