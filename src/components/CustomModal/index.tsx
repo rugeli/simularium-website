@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { Close } from "../Icons";
 
 import theme from "../theme/light-theme.css";
+import theme from "../theme/light-theme.css";
 import styles from "./style.css";
 
 interface CustomModalProps extends ModalProps {

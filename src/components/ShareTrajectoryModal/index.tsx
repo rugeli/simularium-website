@@ -123,11 +123,9 @@ const ShareTrajectoryModal = ({
                 </div>
             ),
             footer: (
-                <>
-                    <Button className={"secondary-button"} onClick={closeModal}>
-                        Ok
-                    </Button>
-                </>
+                <Button className={"secondary-button"} onClick={closeModal}>
+                    Ok
+                </Button>
             ),
         },
         isSharable: {
@@ -140,10 +138,7 @@ const ShareTrajectoryModal = ({
                             disabled
                         />
                         <Button
-                            className={classNames(
-                                "primary-button",
-                                styles.copyButton
-                            )}
+                            className={"primary-button"}
                             onClick={copyToClipboard}
                         >
                             Copy {Link}
@@ -160,6 +155,8 @@ const ShareTrajectoryModal = ({
                         />
                         <div>
                             /{displayTimes.roundedLastFrameTime}
+                            {timeUnits ? timeUnits.name : null}/
+                            {displayTimes.roundedLastFrameTime}
                             {timeUnits ? timeUnits.name : null}
                         </div>
                     </div>

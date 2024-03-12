@@ -77,3 +77,7 @@
 .modal button:hover {
     border-color: red;
 }
+
+.modal :global(.ant-modal-footer) button {
+    width: 82px;
+}
