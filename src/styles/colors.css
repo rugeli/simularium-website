@@ -69,8 +69,9 @@
     --dark-theme-btn-primary: var(--baby-purple);
     --dark-theme-tooltip-bg: var(--charcoal-gray);
     --dark-theme-version-badge-purple: var(--dark-five);
+    --dark-theme-star-icon-color: var(--warm-gray);
+    --dark-theme-star-icon-active-color: var(--white-two);
     /* Light theme */
-    --light-theme-divider-color: var(--heather);
     --light-theme-background-purple: var(--pale-gray);
     --light-theme-heading1-gray: var(--dark-three);
     --light-theme-heading2-gray: var(--grayish-brown);
@@ -80,13 +81,9 @@
     --light-theme-background-off-white: var(--off-white);
     --light-theme-faint-text: var(--white-two);
     --light-theme-input-disabled-color: var(--medium-gray);
+    --light-theme-modal-content-bg: var(--light-purple);
     --light-theme-modal-supplemental-text: var(--charcoal-gray);
-    --light-theme-input-border-highlight: var(--heather);
-    /* modal colors */
-     --light-theme-modal-bg: var(--light-purple);
-     --light-theme-modal-color: var(--dark);
-     --light-theme-modal-close-icon: var(--warm-gray);
-     --light-theme-modal-close-icon-hover: var(--white-three);
+    --light-theme-modal-supplemental-text: var(--charcoal-gray);
     /* primary modal buttons */
     --light-theme-btn-primary-bg: var(--dark-four);
     --light-theme-btn-primary-border: var(--dark-four);
