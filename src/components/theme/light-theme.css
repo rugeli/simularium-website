@@ -1,5 +1,4 @@
 /* Primary and secondary button colors differ within modals */
-
 /* primary buttons */
 .light-theme :global(.primary-button),
 .light-theme :global(.primary-button):focus {
@@ -38,4 +37,27 @@
     background: var(--light-theme-btn-secondary-disabled-bg);
     border: var(--light-theme-btn-secondary-disabled-border);
     color: var(--light-theme-btn-secondary-disabled-color);
+}
+/* modal styles */
+.light-theme:global(.ant-modal) :global(.close-icon):hover::after {
+    color: var(--light-theme-modal-close-icon-hover);
+}
+
+.light-theme:global(.ant-modal-body),
+.light-theme :global(.ant-modal-footer) {
+    background-color: var(--light-theme-modal-bg);
+}
+
+.light-theme :global(.ant-modal-divider) {
+    background-color: var(--light-theme-modal-divider);
+}
+
+.light-theme :global(.ant-input-affix-wrapper) {
+    border: 1px solid var(--light-theme-modal-input-border-highlight);
+}
+
+.light-theme :global(.ant-checkbox-inner),
+.light-theme :global(.ant-checkbox)::after {
+    background-color: transparent;
+    border: 1px solid var(--dark-three) !important;
 }

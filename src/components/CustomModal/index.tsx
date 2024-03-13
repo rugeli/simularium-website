@@ -37,7 +37,9 @@ const CustomModal: React.FC<CustomModalProps> = ({
     const footer = (
         <>
             {divider ? <Divider /> : null}
-            <div className={styles.buttonContainer}>{footerButtons}</div>
+            <div className={classNames(styles.footerButtonContainer)}>
+                {footerButtons}
+            </div>
         </>
     );
 
@@ -47,11 +49,15 @@ const CustomModal: React.FC<CustomModalProps> = ({
             className={classNames(
                 styles.modal,
                 theme.lightTheme,
+                divider && styles.divider,
                 props.className
             )}
+            onCancel={closeHandler}
             closable={false}
             title={title}
             footer={footer}
+            open
+            centered
         />
     );
 };

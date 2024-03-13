@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Button, Checkbox, Input } from "antd";
-import classNames from "classnames";
 
 import { State } from "../../state/types";
 import { TimeUnits } from "../../state/trajectory/types";
@@ -163,11 +162,9 @@ const ShareTrajectoryModal = ({
                 </div>
             ),
             footer: (
-                <>
-                    <Button className="secondary-button" onClick={closeModal}>
-                        Close
-                    </Button>
-                </>
+                <Button className="secondary-button" onClick={closeModal}>
+                    Close
+                </Button>
             ),
         },
     };
@@ -179,10 +176,6 @@ const ShareTrajectoryModal = ({
             titleText="Share Trajectory"
             divider={true}
             width={trajectoryIsSharable ? 550 : 611}
-            onCancel={closeModal}
-            mask={false}
-            centered
-            open
             footerButtons={
                 trajectoryIsSharable
                     ? modalOptions.isSharable.footer

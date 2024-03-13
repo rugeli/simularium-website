@@ -6,11 +6,10 @@
     --dark-four: #2f2a3c;
     --dark-five: #3c384a;
     --pure-white: #ffffff;
-    --off-white: #f8f8f8;
+    --off-white: #f7f7f7;
     --white-two: #d3d3d3;
     --white-three: #d8d8d8;
     --white-four: #f2f2f2;
-    --white-six: #e7e7e7;
     --transparent-white: rgba(255, 255, 255, 0.65);
     --dim-gray: #383838;
     --dim-gray-two: #6e6e6e;
@@ -30,13 +29,12 @@
     --dark-blue-gray: #69738a;
     --brick-red: #d14040;
     /* Non-theme variables */
-    --icon-moon-color: var(--white-three);
+    /* todo: move all or most of these into a theme category */
     --star-checkbox-bg: var(--grayish-brown);
     --footer-bg: var(--dark-three);
     --footer-text: var(--warm-gray);
     --footer-text-border-bottom: var(--grayish-brown);
     --footer-link: var(--blue);
-    --input-border-highlight: var(--heather);
     --color-picker-tooltip: var(--dark-blue-gray);
     --viewer-btn-bg-default: var(--dark-three);
     --viewer-btn-bg-hover: var(--purplish-gray);
@@ -46,9 +44,9 @@
     --viewer-btn-color-disabled: var(--grayish-brown);
     --cancel-icon-color: var(--brick-red);
     /* Dark theme */
-    --dark-theme-primary-color: var(--baby-purple);
     --dark-theme-body-bg: var(--black);
     --dark-theme-header-bg: var(--dark-three);
+    --dark-theme-primary-color: var(--baby-purple);
     --dark-theme-header-text: var(--text-gray);
     --dark-theme-component-bg: var(--dark-four);
     --dark-theme-input-border: var(--white-two);
@@ -66,26 +64,26 @@
     --dark-theme-btn-color: var(--white-three);
     --dark-theme-btn-color-dim: var(--text-gray);
     --dark-theme-btn-hover-bg: var(--grayish-brown);
-    --dark-theme-btn-primary: var(--baby-purple);
     --dark-theme-tooltip-bg: var(--charcoal-gray);
     --dark-theme-version-badge-purple: var(--dark-five);
     --dark-theme-star-icon-color: var(--warm-gray);
     --dark-theme-star-icon-active-color: var(--white-two);
     /* Light theme */
-    --light-theme-background-purple: var(--pale-gray);
-    --light-theme-heading1-gray: var(--dark-three);
-    --light-theme-heading2-gray: var(--grayish-brown);
-    --light-theme-panel-light-gray: var(--white-four);
-    --light-theme-card-bg-white: var(--pure-white);
-    --light-theme-version-badge-purple: var(--allen-purple);
-    --light-theme-background-off-white: var(--off-white);
-    --light-theme-faint-text: var(--white-two);
-    --light-theme-input-disabled-color: var(--medium-gray);
-    --light-theme-modal-content-bg: var(--light-purple);
-    --light-theme-modal-supplemental-text: var(--charcoal-gray);
+    /* general */
+    --light-theme-bg: var(--light-purple);
+    --light-theme-white-bg: var(--pure-white);
+    --light-theme-gray-bg: var(--white-four);
+    --light-theme-faint-color: var(--white-two);
+    --light-theme-h1-color: var(--dark-three);
+    --light-theme-h2-color: var(--grayish-brown);
+    /* modal colors */
+    --light-theme-modal-bg: var(--light-theme-bg);
     --light-theme-modal-supplemental-text: var(--charcoal-gray);
     --light-theme-modal-close-icon: var(--warm-gray);
     --light-theme-modal-close-icon-hover: var(--white-three);
+    --light-theme-modal-divider: var(--heather);
+    --light-theme-modal-input-disabled-color: var(--medium-gray);
+    --light-theme-modal-input-border-highlight: var(--heather);
     /* primary modal buttons */
     --light-theme-btn-primary-bg: var(--dark-four);
     --light-theme-btn-primary-border: var(--dark-four);
@@ -106,4 +104,9 @@
     --light-theme-btn-secondary-disabled-bg: transparent;
     --light-theme-btn-secondary-disabled-border: var(--heather);
     --light-theme-btn-secondary-disabled-color: var(--heather);
+    /* misc light theme components */
+    --light-theme-card-bg: var(--light-theme-white-bg);
+    --light-theme-card-border: var(--allen-purple);
+    --light-theme-visual-glossary-header-bg: var(--pale-gray);
+    --light-theme-visual-glossary-content-bg: var(--off-white);
 }

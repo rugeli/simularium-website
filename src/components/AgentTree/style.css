@@ -1,13 +1,9 @@
-:root {
-    --text-label-margin: 8px;
-}
-
 .container {
     background-color: var(--dark);
 }
 
 .header-label {
-    margin-left: var(--text-label-margin);
+    margin-left: var(--agent-tree-text-label-margin);
     max-width: 120px;
     font-weight: 200;
 }
@@ -32,7 +28,7 @@
 }
 
 .check-all-checkbox :global(.ant-checkbox) {
-    margin-right: var(--text-label-margin);
+    margin-right: var(--agent-tree-text-label-margin);
 }
 
 .no-children-row {
@@ -71,7 +67,7 @@
 .container .agent-names-column {
     display: flex;
     flex-direction: column;
-    margin-left: var(--text-label-margin);
+    margin-left: var(--agent-tree-text-label-margin);
 }
 
 .row-label-container {

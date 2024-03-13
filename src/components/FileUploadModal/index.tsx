@@ -115,11 +115,8 @@ const FileUploadModal: React.FC<FileUploadModalProps> = ({
             closeHandler={closeModal}
             className={styles.uploadModal}
             titleText="Choose a Simularium file to load"
-            open
             footerButtons={footerButtons}
-            onCancel={closeModal}
             width={525}
-            centered
         >
             <Tabs
                 items={tabItems}
