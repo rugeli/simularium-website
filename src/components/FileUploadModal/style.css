@@ -16,10 +16,6 @@
     color: var(--light-theme-modal-supplemental-text);
 }
 
-.upload-modal :global(.ant-tabs-nav) {
-    margin-bottom: 25px;
-}
-
 .upload-modal :global(.ant-tabs-nav)::before {
     content: none;
 }

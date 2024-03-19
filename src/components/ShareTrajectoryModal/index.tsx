@@ -154,8 +154,6 @@ const ShareTrajectoryModal = ({
                         />
                         <div>
                             /{displayTimes.roundedLastFrameTime}
-                            {timeUnits ? timeUnits.name : null}/
-                            {displayTimes.roundedLastFrameTime}
                             {timeUnits ? timeUnits.name : null}
                         </div>
                     </div>

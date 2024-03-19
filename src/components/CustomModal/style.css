@@ -4,13 +4,6 @@
     border-radius: 3px;
 }
 
-.modal :global(.close-icon) {
-    cursor: pointer;
-    display: flex;
-    position: absolute;
-    right: 24px;
-}
-
 .modal :global(.ant-modal-header) {
     display: flex;
     height: 46px;
@@ -24,27 +17,35 @@
     font-weight: 400;
 }
 
+.modal :global(.close-icon) {
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    right: 24px;
+}
+
+.modal :global(.close-icon):hover::after {
+    color: var(--light-theme-modal-close-icon-hover);
+}
+
 .modal :global(.ant-modal-body) {
     font-size: 16px;
     padding: 24px 24px 10px 24px;
 }
 
 .modal.divider :global(.ant-modal-body)  {
-    font-size: 16px;
     padding: 24px;
 }
 
 .modal :global(.ant-modal-footer) {
-    padding: 0px;
+    background-color: var(--light-theme-modal-bg);
+    padding: 14px 24px;
 }
 
 .footer-button-container {
     display: flex;
     flex-direction: row-reverse;
     gap: 12px;
-    margin: 0px;
-    padding: 14px 24px;
-    justify-content: center;
 }
 
 .modal :global(.ant-modal-footer) button {
@@ -53,19 +54,19 @@
 }
 
 .modal :global(.ant-input-affix-wrapper) {
+    border: 1px solid var(--light-theme-modal-input-border-highlight);
     border-radius: 3px;
-    text-align: right;
-    box-shadow: none;
 }
 
 .modal :global(.ant-divider) {
     left: 0;
     margin: 0px;
     position: absolute;
-    left: 0;
-    background-color: var(--heather);
+    background-color: var(--light-theme-modal-divider);
 }
 
-.modal :global(.ant-modal-close):hover{
-    color: var(--white-three);
+.modal :global(.ant-checkbox-inner),
+.modal :global(.ant-checkbox)::after {
+    background-color: transparent;
+    border: 1px solid var(--light-theme-checkbox-color) !important;
 }

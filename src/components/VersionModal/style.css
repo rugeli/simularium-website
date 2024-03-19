@@ -1,7 +1,3 @@
-.version :global(.ant-modal-body) {
-    padding-bottom: 12px;
-}
-
 .blue-text {
     color: var(--blue);
 }
