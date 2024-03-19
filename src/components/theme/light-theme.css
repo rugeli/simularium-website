@@ -1,4 +1,5 @@
 /* Primary and secondary button colors differ within modals */
+
 /* primary buttons */
 .light-theme :global(.primary-button),
 .light-theme :global(.primary-button):focus {
