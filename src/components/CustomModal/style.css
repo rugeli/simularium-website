@@ -13,20 +13,20 @@
 
 .modal :global(.ant-modal-header) {
     display: flex;
-    height: 40px;
+    height: 46px;
     justify-content: center;
 }
 
 .modal :global(.ant-modal-title) {
     align-items: center;
     display: flex;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .modal :global(.ant-modal-body) {
     font-size: 16px;
-    padding: 24px 24px 0px 24px;
+    padding: 24px 24px 10px 24px;
 }
 
 .modal.divider :global(.ant-modal-body)  {
