@@ -39,13 +39,15 @@
 
 .modal :global(.ant-modal-footer) {
     background-color: var(--light-theme-modal-bg);
-    padding: 14px 24px;
+    padding: 0px;
 }
 
 .footer-button-container {
     display: flex;
     flex-direction: row-reverse;
     gap: 12px;
+    margin: 0px;
+    padding: 14px 24px;
 }
 
 .modal :global(.ant-modal-footer) button {
