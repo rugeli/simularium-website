@@ -3,6 +3,8 @@
 @import "./styles/constants.css";
 @import "./styles/icons.css";
 
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;600&display=swap');
+
 /* global styles
 css modules not applied */
 
@@ -57,6 +59,15 @@ canvas:focus {
     font-weight: normal;
     font-style: normal;
     font-display: block;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: local('Overpass'), url('https://fonts.gstatic.com/s/overpass/v12/qFdH35WCmI96Ajtm81GrU9vgwBcIs1s.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  descent-override: 20%;
+  ascent-override: 80%;
 }
 
 .ant-btn:focus,
