@@ -7,7 +7,7 @@
 }
 
 .header-label {
-    margin-left: var(--agent-tree-text-label-margin);
+    margin-left: var(--text-label-margin);
     max-width: 120px;
     font-weight: 200;
 }
