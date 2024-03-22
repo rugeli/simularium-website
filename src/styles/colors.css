@@ -108,8 +108,8 @@
     --light-theme-btn-secondary-disabled-border: var(--heather);
     --light-theme-btn-secondary-disabled-color: var(--heather);
     /* misc light theme components */
-    --light-theme-card-bg: var(--light-theme-white-bg);
-    --light-theme-card-border: var(--allen-purple);
+    --light-theme-card-bg-white: var(--light-theme-white-bg);
+    --light-theme-version-badge-purple: var(--allen-purple);
     --light-theme-visual-glossary-header-bg: var(--pale-gray);
     --light-theme-visual-glossary-content-bg: var(--off-white);
 }
