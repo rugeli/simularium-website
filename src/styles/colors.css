@@ -75,8 +75,8 @@
     --light-theme-white-bg: var(--pure-white);
     --light-theme-gray-bg: var(--white-four);
     --light-theme-faint-color: var(--white-two);
-    --light-theme-h1-color: var(--dark-three);
-    --light-theme-h2-color: var(--grayish-brown);
+    --light-theme-heading1-color: var(--dark-three);
+    --light-theme-heading2-color: var(--grayish-brown);
     --light-theme-checkbox-color: var(--dark-three);
     --light-theme-blue-text: var(--blue);
     /* modal colors */
