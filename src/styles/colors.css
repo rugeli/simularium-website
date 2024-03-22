@@ -74,7 +74,7 @@
     --light-theme-bg: var(--light-purple);
     --light-theme-white-bg: var(--pure-white);
     --light-theme-gray-bg: var(--white-four);
-    --light-theme-faint-color: var(--white-two);
+    --light-theme-faint-text: var(--white-two);
     --light-theme-heading1-color: var(--dark-three);
     --light-theme-heading2-color: var(--grayish-brown);
     --light-theme-checkbox-color: var(--dark-three);
