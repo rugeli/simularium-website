@@ -15,11 +15,8 @@
     gap: 6px;
 }
 
-.url-input {
-    flex-grow: 1;
-}
-
 .url-input[disabled]:global(.ant-input) {
+    flex-grow: 1;
     color: var(--light-theme-modal-input-color);
     background-color: var(--light-theme-modal-input-bg);
     cursor: auto;
@@ -49,6 +46,7 @@
     text-align: right;
     width: 64px;
 }
+
 .time-input-text {
     margin: 0px;
 }

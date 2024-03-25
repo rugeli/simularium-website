@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Button, Checkbox, Input } from "antd";
+import classNames from "classnames";
 
 import { State } from "../../state/types";
 import { TimeUnits } from "../../state/trajectory/types";
@@ -137,7 +138,10 @@ const ShareTrajectoryModal = ({
                             disabled
                         />
                         <Button
-                            className={"primary-button"}
+                            className={classNames(
+                                "primary-button",
+                                styles.copyButton
+                            )}
                             onClick={copyToClipboard}
                         >
                             Copy {Link}
