@@ -12,7 +12,11 @@
 
 .url-input-container {
     display: flex;
-    gap: 14px;
+    gap: 6px;
+}
+
+.url-input {
+    flex-grow: 1;
 }
 
 .url-input[disabled] {
@@ -34,14 +38,15 @@
 }
 
 .time-input-container {
-    align-items: center;
+    align-items: end;
     display: flex;
-    gap: 8px;
+    gap: 7px;
 }
 
 .time-input,
 .time-input[disabled] {
-    width: 75px;
+    text-align: right;
+    width: 64px;
 }
 
 .time-input[disabled] {

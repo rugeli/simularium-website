@@ -2,6 +2,7 @@
 .modal :global(.ant-modal-content) {
     /* prevents modal body color rendering under header/footer at corners */
     border-radius: 3px;
+    color: var(--light-theme-modal-color);
 }
 
 .modal :global(.ant-modal-header) {
@@ -53,6 +54,12 @@
 .modal :global(.ant-modal-footer) button {
     height: 32px;
     width: 83px;
+}
+
+.modal :global(.ant-input),
+.modal :global(.ant-input):global(.ant-input-disabled) {
+    border-radius: 3px;
+    border-color: var(--light-theme-modal-input-border);
 }
 
 .modal :global(.ant-input-affix-wrapper) {
