@@ -38,7 +38,7 @@
 }
 
 .time-input-container {
-    align-items: end;
+    align-items: center;
     display: flex;
     gap: 7px;
 }
