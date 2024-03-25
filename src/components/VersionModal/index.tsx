@@ -23,7 +23,7 @@ const VersionModal: React.FC<VersionModalProps> = ({ setModalVisible }) => {
     return (
         <CustomModal
             closeHandler={closeModal}
-            titleText="Version Information"
+            titleText="Version information"
             footerButtons={footerButton}
             width={425}
         >

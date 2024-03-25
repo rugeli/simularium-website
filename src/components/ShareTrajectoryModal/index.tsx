@@ -171,7 +171,7 @@ const ShareTrajectoryModal = ({
         <CustomModal
             closeHandler={closeModal}
             className={styles.uploadModal}
-            titleText="Share Trajectory"
+            titleText="Share trajectory"
             divider={true}
             width={trajectoryIsSharable ? 550 : 611}
             footerButtons={

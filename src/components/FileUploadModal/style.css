@@ -1,5 +1,6 @@
 .upload-modal .extra-info {
     margin-top: .25rem;
+    margin-bottom: 0rem;
     color: var(--light-theme-modal-supplemental-text);
     font-size: 14px;
 }
