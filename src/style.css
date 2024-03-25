@@ -3,6 +3,11 @@
 @import "./styles/constants.css";
 @import "./styles/icons.css";
 
+
+@import "./styles/colors.css";
+@import "./styles/constants.css";
+@import "./styles/icons.css";
+
 /* global styles
 css modules not applied */
 

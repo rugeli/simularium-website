@@ -15,10 +15,15 @@
     --dim-gray-two: #6e6e6e;
     --purplish-gray: #4a4658;
     --pale-gray: #ddd9ec;
+    --dim-gray-two: #6e6e6e;
+    --purplish-gray: #4a4658;
+    --pale-gray: #ddd9ec;
     --heather: #bab5c9;
     --text-gray: #a0a0a0;
     --grayish-brown: #4a4a4a;
     --warm-gray: #979797;
+    --charcoal-gray: #3b3649;
+    --light-purple: #e7e4f2;
     --charcoal-gray: #3b3649;
     --light-purple: #e7e4f2;
     --baby-purple: #b59ff6;
@@ -30,11 +35,30 @@
     --brick-red: #d14040;
     /* non-theme variables */
     --star-checkbox-bg: var(--grayish-brown);
+    --blue: #0094ff;
+    --baby-purple-two: #dccfff;
+    --medium-gray: #aeaeae;
+    --dark-blue-gray: #69738a;
+    --brick-red: #d14040;
+    /* non-theme variables */
+    --star-checkbox-bg: var(--grayish-brown);
     --footer-bg: var(--dark-three);
     --footer-text: var(--warm-gray);
     --footer-text-border-bottom: var(--grayish-brown);
+    --footer-text-border-bottom: var(--grayish-brown);
     --footer-link: var(--blue);
     --input-border-highlight: var(--heather);
+    --color-picker-tooltip: var(--dark-blue-gray);
+    --cancel-icon-color: var(--brick-red);
+    /* Dark theme */
+    /* viewport-buttons */
+    --dark-theme-viewport-button-bg: var(--dark-three);
+    --dark-theme-viewport-button-border: var(--dark-three);
+    --dark-theme-viewport-button-color: var(--white-three);
+    --dark-theme-viewport-button-toggle-border: var(--dim-gray-two);
+    --dark-theme-viewport-button-hover-bg: var(--purplish-gray);
+    --dark-theme-viewport-button-disabled-color: var(--dim-gray-two);
+    /* dark theme general/uncategorized */
     --color-picker-tooltip: var(--dark-blue-gray);
     --cancel-icon-color: var(--brick-red);
     /* Dark theme */
@@ -52,6 +76,10 @@
     --dark-theme-dim-color: var(--text-gray);
     --dark-theme-slider-handle-color: var(--white-three);
     --dark-theme-primary-color: var(--baby-purple);
+    --dark-theme-text-color: var(--off-white);
+    --dark-theme-dim-color: var(--text-gray);
+    --dark-theme-slider-handle-color: var(--white-three);
+    --dark-theme-primary-color: var(--baby-purple);
     --dark-theme-header-text: var(--text-gray);
     --dark-theme-component-bg: var(--dark-four);
     --dark-theme-input-border: var(--white-two);
@@ -64,6 +92,8 @@
     --dark-theme-sidebar-header-bg: var(--dark-three);
     --dark-theme-sidebar-item-bg: var(--dark-two);
     --dark-theme-sidebar-text: var(--white-two);
+    --dark-theme-btn-hover-bg: var(--grayish-brown);
+    --dark-theme-tooltip-bg: var(--charcoal-gray);
     --dark-theme-btn-hover-bg: var(--grayish-brown);
     --dark-theme-tooltip-bg: var(--charcoal-gray);
     --dark-theme-version-badge-purple: var(--dark-five);
