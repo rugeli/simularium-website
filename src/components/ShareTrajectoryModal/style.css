@@ -19,8 +19,9 @@
     flex-grow: 1;
 }
 
-.url-input[disabled] {
-    color: var(--black);
+.url-input[disabled]:global(.ant-input) {
+    color: var(--light-theme-modal-input-color);
+    background-color: var(--light-theme-modal-input-bg);
     cursor: auto;
     direction: rtl;
     width: 395px;
@@ -48,12 +49,6 @@
     text-align: right;
     width: 64px;
 }
-
-.time-input[disabled] {
-    background: transparent;
-    color: var(--light-theme-modal-input-disabled-color);
-}
-
 .time-input-text {
     margin: 0px;
 }

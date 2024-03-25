@@ -59,7 +59,14 @@
 .modal :global(.ant-input),
 .modal :global(.ant-input):global(.ant-input-disabled) {
     border-radius: 3px;
+    background-color: var(--light-theme-modal-input-bg);
     border-color: var(--light-theme-modal-input-border);
+    color: var(--light-theme-modal-input-color);
+}
+
+.modal :global(.ant-input):global(.ant-input-disabled) {
+    background-color: var(--light-theme-modal-disabled-bg);
+    color: var(--light-theme-modal-input-disabled-color);
 }
 
 .modal :global(.ant-input-affix-wrapper) {

@@ -115,8 +115,11 @@
     --light-theme-modal-close-icon: var(--warm-gray);
     --light-theme-modal-close-icon-hover: var(--white-three);
     --light-theme-modal-divider: var(--heather);
-    --light-theme-modal-input-disabled-color: var(--medium-gray);
+    --light-theme-modal-input-bg: var(--white-four);
+    --light-theme-modal-input-color: var(--dark);
     --light-theme-modal-input-border: var(--heather);
+    --light-theme-modal-disabled-bg: transparent;
+    --light-theme-modal-input-disabled-color: var(--medium-gray);
     /* primary modal buttons */
     --light-theme-btn-primary-bg: var(--dark-four);
     --light-theme-btn-primary-border: var(--dark-four);
